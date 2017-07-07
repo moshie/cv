@@ -120,9 +120,6 @@ export default {
 }
 </script>
 
-<style lang="sass">
-$red: red;
-body {
-  background: $red;
-}
+<style>
+
 </style>
