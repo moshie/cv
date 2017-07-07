@@ -8,7 +8,7 @@
         </li>
         <li class="quick-links__item">
             <Print />
-            <button type="button" href="#" class="quick-links__link">
+            <button type="button" @click="print()" class="quick-links__link">
                 Print page
             </button>
         </li>
@@ -20,7 +20,7 @@
         </li>
         <li class="quick-links__item">
             <Star />
-            <button type="button" href="#" class="quick-links__link">
+            <button type="button" class="quick-links__link">
                 Bookmark
             </button>
         </li>
@@ -50,6 +50,11 @@ export default {
     data () {
         return {}
     },
+    methods: {
+        print: function () {
+            window.print()
+        }
+    },
     components: {
         Twitter,
         Github,
@@ -60,5 +65,38 @@ export default {
 </script>
 
 <style scoped>
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 
+    &__item {
+        position: relative;
+        flex: 0 0 50%;
+        margin-bottom: 20px;
+        padding-left: 30px;
+        padding-top: 3px;
+        color: #000;
+        min-height: 20px;
+
+        img,
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0px;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #4d4d4d;
+        vertical-align: middle;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        font-size: 14px;
+    }
+
+}
 </style>

@@ -1,0 +1,50 @@
+.h1, h1 {
+
+}
+
+.h2, h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    display: table;
+    width: 100%;
+    white-space: nowrap;
+
+    &:before, &:after {
+      border-top: 1px solid #F7F7F7;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+      width: 45%;
+    }
+
+    &:before { right: 0; }
+
+    &:after { left: 0; }
+}
+
+.h3, h3 {
+
+}
+
+a:focus,
+button:focus {
+    outline: 2px dashed rgba(0, 168, 255, 0.5);
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+.text--danger {
+    color: #A10F0F;
+}
+
+::-moz-selection {
+    background: rgba(0, 168, 255, 0.5);
+}
+::selection {
+    background: rgba(0, 168, 255, 0.5);
+}

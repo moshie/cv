@@ -4,30 +4,87 @@
         "items": [
             {
                 "icon": "",
-                "title": "angular"
+                "title": "Nodejs"
             },
             {
                 "icon": "",
-                "title": "vue"
+                "title": "Angular 1 / 2"
+            },
+            {
+                "icon": "",
+                "title": "Vue js"
+            },
+            {
+                "icon": "",
+                "title": "React"
+            },
+            {
+                "icon": "",
+                "title": "ES6 / 7"
+            },
+            {
+                "icon": "",
+                "title": "Express"
             }
         ]
     },
     {
         "title": "PHP",
         "items": [
-
+            {
+                "icon": "",
+                "title": "Laravel"
+            },
+            {
+                "icon": "",
+                "title": "Codeigniter"
+            },
+            {
+                "icon": "",
+                "title": "WordPress"
+            }
         ]
     },
     {
-        "title": "CSS / SASS",
+        "title": "Build tools",
         "items": [
-            
+            {
+                "icon": "",
+                "title": "Webpack"
+            },
+            {
+                "icon": "",
+                "title": "Gulp"
+            },
+            {
+                "icon": "",
+                "title": "Grunt"
+            }
         ]
     },
     {
         "title": "Design",
         "items": [
-            
+            {
+                "icon": "",
+                "title": "Photoshop"
+            },
+            {
+                "icon": "",
+                "title": "Illustrator"
+            },
+            {
+                "icon": "",
+                "title": "Sketch"
+            },
+            {
+                "icon": "",
+                "title": "Lightroom"
+            },
+            {
+                "icon": "",
+                "title": "3ds max"
+            }
         ]
     }
 ]

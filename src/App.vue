@@ -1,7 +1,7 @@
 <template>
     <div class="container container--shadow" id="app">
 
-        <header>
+        <header class="header">
             <Logo class="logo" />
             <button type="button" class="bookmark">
                 <Star />
@@ -120,6 +120,17 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+@import "scss/base/reset";
+@import "scss/base/base";
+@import "scss/base/typography";
+@import "scss/helpers/clearfix";
+@import "scss/helpers/sr-only";
+@import "scss/components/container";
+@import "scss/components/header";
+@import "scss/components/about";
+@import "scss/components/bookmark";
+@import "scss/components/button";
+@import "scss/components/logo";
+@import "scss/components/footer";
 </style>

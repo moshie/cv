@@ -1,9 +1,9 @@
 <template>
     <div class="school">
-        <school />
+        <school class="school__icon" />
         <span class="school__title">{{ title }}</span>
         <span class="school__date">
-            <time :datetime="startAttribute">{{ start }}</time> - 
+            <time :datetime="startAttribute">{{ start }}</time> -
             <time :datetime="endAttribute">{{ end }}</time>
         </span>
     </div>
@@ -34,5 +34,37 @@ export default {
 </script>
 
 <style scoped>
+@import "../scss/helpers/clearfix";
+.school {
+    @extend .clearfix;
+    padding-left: 30px;
+    position: relative;
+    display: block;
+    margin-bottom: 25px;
 
+    &:last-child {
+        margin-bottom: 30px;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0px;
+        top: 2px;
+    }
+
+    &__title {
+        float: left;
+        font-size: 17px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 3px;
+    }
+
+    &__date {
+        float: left;
+        clear: left;
+        color: #4A4A4A;
+        font-size: 12px;
+    }
+}
 </style>
