@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="7.56542969" cy="8.43457031" r="7.56542969"></circle>
+        <filter x="-16.5%" y="-16.5%" width="133.0%" height="133.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="1" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.813915308 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-200.000000, -479.000000)">
+            <g id="About-me" transform="translate(0.000000, 241.000000)">
+                <g id="Read-more" transform="translate(41.000000, 237.000000)">
+                    <g id="Group" transform="translate(160.000000, 2.000000)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <circle stroke="#BABABA" stroke-width="1" cx="7.56542969" cy="8.43457031" r="8.06542969"></circle>
+                        </g>
+                        <g id="iconmonstr-arrow-25" transform="translate(7.500000, 9.369141) rotate(-270.000000) translate(-7.500000, -9.369141) translate(5.000000, 5.869141)" fill-rule="nonzero" fill="#000000">
+                            <polygon id="Shape" points="0 0.868896484 0.885405518 0 4.34448242 3.47558594 0.885405518 6.95117188 0 6.08227539 2.60668945 3.47558594"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
