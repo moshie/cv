@@ -9,3 +9,7 @@ language: node_js
 node_js:
   - "iojs"
   - "7"
+before_install:
+  - "sudo apt-get update"
+  - "sudo apt-get install oracle-java8-installer"
+  - "sudo update-java-alternatives -s java-8-oracle"
