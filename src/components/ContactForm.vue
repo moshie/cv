@@ -75,6 +75,10 @@ export default {
 .form {
     margin-bottom: 20px;
 
+    @media print {
+        display: none;
+    }
+
     &__description {
         display: block;
         margin-bottom: 12px;

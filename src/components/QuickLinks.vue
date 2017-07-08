@@ -18,12 +18,12 @@
                 {{ github }}
             </a>
         </li>
-        <li class="quick-links__item">
+        <!-- <li class="quick-links__item">
             <Star />
             <button type="button" class="quick-links__link">
                 Bookmark
             </button>
-        </li>
+        </li> -->
     </ul>
 </template>
 

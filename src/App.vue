@@ -3,9 +3,9 @@
 
         <header class="header">
             <Logo class="logo" />
-            <button type="button" class="bookmark">
+            <!-- <button type="button" class="bookmark">
                 <Star />
-            </button>
+            </button> -->
         </header>
 
         <main id="main-content" class="main">

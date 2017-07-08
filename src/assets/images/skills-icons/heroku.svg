@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>heroku</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-238.000000, -526.000000)" fill-rule="nonzero" fill="#430098">
+            <g id="heroku" transform="translate(238.000000, 526.000000)">
+                <path d="M18.7,20.02 C18.7,20.515 18.315,20.9 17.82,20.9 L1.98,20.9 C1.485,20.9 1.1,20.515 1.1,20.02 L1.1,1.98 C1.1,1.485 1.485,1.1 1.98,1.1 L17.82,1.1 C18.315,1.1 18.7,1.485 18.7,1.98 L18.7,20.02 Z M17.82,0 L1.98,0 C0.88,0 0,0.88 0,1.98 L0,20.02 C0,21.12 0.88,22 1.98,22 L17.82,22 C18.92,22 19.8,21.12 19.8,20.02 L19.8,1.98 C19.8,0.88 18.92,0 17.82,0 L17.82,0 Z" id="Fill-20"></path>
+                <polygon id="Fill-22" points="4.95 18.7 7.425 16.5 4.95 14.3"></polygon>
+                <path d="M13.915,9.79 C13.475,9.35 12.65,8.8 11.275,8.8 C9.79,8.8 8.25,9.185 7.15,9.57 L7.15,3.3 L4.95,3.3 L4.95,12.815 L6.49,12.1 C6.49,12.1 9.02,10.945 11.275,10.945 C12.375,10.945 12.65,11.55 12.65,12.1 L12.65,18.7 L14.85,18.7 L14.85,12.1 C14.85,11.935 14.85,10.725 13.915,9.79" id="Fill-24"></path>
+                <path d="M11,6.875 L13.2,6.875 C14.19,5.72 14.685,4.565 14.85,3.3 L12.65,3.3 C12.43,4.565 11.88,5.72 11,6.875" id="Fill-26"></path>
+            </g>
+        </g>
+    </g>
+</svg>

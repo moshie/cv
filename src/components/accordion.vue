@@ -5,7 +5,8 @@
             <indicator class="indicator" />
         </button>
         <ul class="accordion__panel" v-show="open">
-            <li class="accordion__item" v-for="item in items">
+            <li class="accordion__item" v-for="(item, index) in items">
+                <component :is="item.icon" :key="index"></component>
                 {{ item.title }}
             </li>
         </ul>
@@ -14,6 +15,42 @@
 
 <script>
 import indicator from '../assets/images/indicator.svg'
+
+// JavaScript
+import nodejs from '../assets/images/skills-icons/nodejs.svg'
+import express from '../assets/images/skills-icons/express.svg'
+import mongodb from '../assets/images/skills-icons/mongodb.svg'
+import mocha from '../assets/images/skills-icons/mocha.svg'
+import typescript from '../assets/images/skills-icons/typescript.svg'
+import angular from '../assets/images/skills-icons/angular.svg'
+import vue from '../assets/images/skills-icons/vue.svg'
+import react from '../assets/images/skills-icons/react.svg'
+import socketio from '../assets/images/skills-icons/socketio.svg'
+import jquery from '../assets/images/skills-icons/jquery.svg'
+import googlemaps from '../assets/images/skills-icons/googlemaps.svg'
+
+// PHP
+import laravel from '../assets/images/skills-icons/laravel.svg'
+import codeigniter from '../assets/images/skills-icons/code-igniter.svg'
+import wordpress from '../assets/images/skills-icons/wordpress.svg'
+
+// .NET
+import umbraco from '../assets/images/skills-icons/umbraco.svg'
+
+// Hosting
+import aws from '../assets/images/skills-icons/aws.svg'
+import heroku from '../assets/images/skills-icons/heroku.svg'
+import wpengine from '../assets/images/skills-icons/wpengine.svg'
+import forge from '../assets/images/skills-icons/forge.svg'
+
+// Tools
+import webpack from '../assets/images/skills-icons/webpack.svg'
+import gulp from '../assets/images/skills-icons/gulp.svg'
+import grunt from '../assets/images/skills-icons/grunt.svg'
+import browserify from '../assets/images/skills-icons/browserify.svg'
+import office from '../assets/images/skills-icons/office.svg'
+import adobe from '../assets/images/skills-icons/adobe.svg'
+import git from '../assets/images/skills-icons/git.svg'
 
 export default {
     name: 'accordion',
@@ -27,7 +64,43 @@ export default {
         }
     },
     components: {
-        indicator
+        indicator,
+
+        // JavaScript
+        nodejs,
+        express,
+        mongodb,
+        mocha,
+        typescript,
+        angular,
+        vue,
+        react,
+        socketio,
+        jquery,
+        googlemaps,
+
+        // PHP
+        laravel,
+        codeigniter,
+        wordpress,
+
+        // .NET
+        umbraco,
+
+        // Hosting
+        aws,
+        heroku,
+        wpengine,
+        forge,
+
+        // Tools
+        git,
+        webpack,
+        gulp,
+        grunt,
+        browserify,
+        office,
+        adobe
     }
 }
 </script>

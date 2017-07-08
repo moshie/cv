@@ -3,28 +3,48 @@
         "title": "JavaScript",
         "items": [
             {
-                "icon": "",
+                "icon": "nodejs",
                 "title": "Nodejs"
             },
             {
-                "icon": "",
-                "title": "Angular 1 / 2"
+                "icon": "express",
+                "title": "Express"
             },
             {
-                "icon": "",
+                "icon": "mongodb",
+                "title": "MongoDB"
+            },
+            {
+                "icon": "mocha",
+                "title": "Mocha"
+            },
+            {
+                "icon": "typescript",
+                "title": "Typescript"
+            },
+            {
+                "icon": "angular",
+                "title": "Angular"
+            },
+            {
+                "icon": "vue",
                 "title": "Vue js"
             },
             {
-                "icon": "",
+                "icon": "react",
                 "title": "React"
             },
             {
-                "icon": "",
-                "title": "ES6 / 7"
+                "icon": "socketio",
+                "title": "Socket io"
             },
             {
-                "icon": "",
-                "title": "Express"
+                "icon": "jquery",
+                "title": "JQuery"
+            },
+            {
+                "icon": "googlemaps",
+                "title": "Google Maps Api"
             }
         ]
     },
@@ -32,58 +52,79 @@
         "title": "PHP",
         "items": [
             {
-                "icon": "",
+                "icon": "laravel",
                 "title": "Laravel"
             },
             {
-                "icon": "",
+                "icon": "codeigniter",
                 "title": "Codeigniter"
             },
             {
-                "icon": "",
+                "icon": "wordpress",
                 "title": "WordPress"
             }
         ]
     },
     {
-        "title": "Build tools",
+        "title": ".NET",
         "items": [
             {
-                "icon": "",
-                "title": "Webpack"
-            },
-            {
-                "icon": "",
-                "title": "Gulp"
-            },
-            {
-                "icon": "",
-                "title": "Grunt"
+                "icon": "umbraco",
+                "title": "Umbraco"
             }
         ]
     },
     {
-        "title": "Design",
+        "title": "Hosting",
         "items": [
             {
-                "icon": "",
-                "title": "Photoshop"
+                "icon": "aws",
+                "title": "AWS - (SES, S3, Cloud Front)"
             },
             {
-                "icon": "",
-                "title": "Illustrator"
+                "icon": "heroku",
+                "title": "Heroku"
             },
             {
-                "icon": "",
-                "title": "Sketch"
+                "icon": "wpengine",
+                "title": "WPEngine"
             },
             {
-                "icon": "",
-                "title": "Lightroom"
+                "icon": "forge",
+                "title": "Forge / Envoyer"
+            }
+        ]
+    },
+    {
+        "title": "Tools",
+        "items": [
+            {
+                "icon": "git",
+                "title": "Git Version Control"
             },
             {
-                "icon": "",
-                "title": "3ds max"
+                "icon": "webpack",
+                "title": "Webpack"
+            },
+            {
+                "icon": "gulp",
+                "title": "Gulp"
+            },
+            {
+                "icon": "grunt",
+                "title": "Grunt"
+            },
+            {
+                "icon": "browserify",
+                "title": "Browserify"
+            },
+            {
+                "icon": "office",
+                "title": "Office Suite (Word, Excel, Outlook)"
+            },
+            {
+                "icon": "adobe",
+                "title": "Adobe Suite"
             }
         ]
     }
