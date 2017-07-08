@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .about {
     position: relative;
     padding: 0 10px 0 40px;

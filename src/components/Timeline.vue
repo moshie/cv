@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .timeline {
     margin-left: 10px;
     padding-left: 20px;

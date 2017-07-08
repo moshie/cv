@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .panel {
     margin-bottom: 20px;
 

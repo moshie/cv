@@ -105,7 +105,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .accordion {
     border-top: 1px solid #F7F7F7;
     margin-left: -15px;

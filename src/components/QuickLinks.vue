@@ -64,7 +64,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .quick-links {
     display: flex;
     flex-wrap: wrap;

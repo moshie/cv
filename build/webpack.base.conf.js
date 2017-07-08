@@ -47,10 +47,6 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
-        test: /\.s[a|c]ss$/,
-        loader: 'style!css!sass'
-      },
-      {
         test: /\.svg$/,
         loader: 'vue-svg-loader'
       },
