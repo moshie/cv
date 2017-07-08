@@ -5,3 +5,7 @@ deploy:
   app: polar-sands-58119
   on:
     repo: moshie/cv
+language: node_js
+node_js:
+  - "iojs"
+  - "7"
