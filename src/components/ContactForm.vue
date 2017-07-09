@@ -1,31 +1,39 @@
 <template>
-    <form class="form" name="contact" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted" netlify>
-        <slot name="description"></slot>
+    <div>
+        <form class="form" name="contact" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted" netlify>
+            <slot name="description"></slot>
 
-        <div class="form__group" :class="{ 'form--has-error' : errors.has('name') }">
-            <label for="name" class="sr-only">Full name</label>
-            <input type="text" v-model="name" v-validate="'required|min:3'" name="name" id="name" placeholder="Name" class="form__field">
-            <p class="text--danger form__error" v-if="errors.has('name')">{{ errors.first('name') }}</p>
-        </div>
+            <div class="form__group" :class="{ 'form--has-error' : errors.has('name') }">
+                <label for="name" class="sr-only">Full name</label>
+                <input type="text" v-model="name" v-validate="'required|min:3'" name="name" id="name" placeholder="Name" class="form__field">
+                <p class="text--danger form__error" v-if="errors.has('name')">{{ errors.first('name') }}</p>
+            </div>
 
-        <div class="form__group" :class="{ 'form--has-error' : errors.has('email') }">
-            <label for="email" class="sr-only">Email</label>
-            <input type="email" v-model="email" v-validate="'required|email'" name="email" id="email" placeholder="Email" class="form__field">
-            <p class="text--danger form__error" v-if="errors.has('email')">{{ errors.first('email') }}</p>
-        </div>
+            <div class="form__group" :class="{ 'form--has-error' : errors.has('email') }">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" v-model="email" v-validate="'required|email'" name="email" id="email" placeholder="Email" class="form__field">
+                <p class="text--danger form__error" v-if="errors.has('email')">{{ errors.first('email') }}</p>
+            </div>
 
-        <div class="form__group" :class="{ 'form--has-error' : errors.has('message') }">
-            <label for="message" class="sr-only">
-                Message <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</small>
-            </label>
-            <textarea name="message" v-model="message" v-validate="'required|max:225'" id="message" placeholder="Message" class="form__field" cols="4"></textarea>
-            <p class="text--danger form__error" v-if="errors.has('message')">{{ errors.first('message') }}</p>
-        </div>
+            <div class="form__group" :class="{ 'form--has-error' : errors.has('message') }">
+                <label for="message" class="sr-only">
+                    Message <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</small>
+                </label>
+                <textarea name="message" v-model="message" v-validate="'required|max:225'" id="message" placeholder="Message" class="form__field" cols="4"></textarea>
+                <p class="text--danger form__error" v-if="errors.has('message')">{{ errors.first('message') }}</p>
+            </div>
 
-        <div class="form__group">
-            <button type="submit" class="button__primary">Send</button>
+            <div class="form__group">
+                <button type="submit" class="button__primary">Send</button>
+            </div>
+        </form>
+        <div class="form__success" v-if="formSubmitted">
+            Thanks! I'll be in touch soon.
         </div>
-    </form>
+        <div class="form__alert" v-if="submitError">
+            Oops! Looks like something went wrong.
+        </div>
+    </div>
 </template>
 
 <script>
@@ -37,6 +45,7 @@ export default {
             email: '',
             message: '',
             maxLength: 225,
+            submitError: false,
             formSubmitted: false
         }
     },
@@ -58,9 +67,10 @@ export default {
             this.$http.post('https://formspree.io/hello@wp-unite.io', data)
                 .then(() => {
                     this.formSubmitted = true
-                    alert('form submitted!')
+                    this.submitError = false
+                    console.log('form submitted!')
                 }, () => {
-                    alert('Form submission failed!')
+                    this.submitError = true
                 })
         }
     }
@@ -104,6 +114,20 @@ export default {
         display: block;
         margin-bottom: 10px;
         padding-top: 10px;
+    }
+
+    &__success {
+        padding: 15px;
+        color: green;
+        border: 1px solid green;
+        margin-bottom: 30px;
+    }
+
+    &__alert {
+        padding: 15px;
+        color: #A10F0F;
+        border: 1px solid #A10F0F;
+        margin-bottom: 30px;
     }
 
 }
