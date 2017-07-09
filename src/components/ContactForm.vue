@@ -29,8 +29,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
-
 export default {
     name: 'contact-form',
     data () {
@@ -51,42 +49,19 @@ export default {
             }
         },
         submitForm: function (evt) {
-            // var form = document.getElementsByTagName('form')[0]
-            // var data = new FormData(evt.target)
+            var data = {
+                name: this.name,
+                email: this.email,
+                message: this.message
+            }
 
-            // this.$http({
-            //     url: '/',
-            //     data,
-            //     headers: {
-            //         'Content-Type': 'application/x-www-form-urlencoded'
-            //     }
-            // }).then(() => {
-            //     this.formSubmitted = true
-            //     alert('form submitted!')
-            // }, () => {
-            //     alert('Form submission failed!')
-            // })
-
-            var $form = $(evt.target)
-
-            $.post($form.attr('action'), $form.serialize()).then(function () {
-                alert('Thank you!')
-            })
-
-            // this.$http({
-            //     url: '/',
-            //     method: 'POST',
-            //     data: {
-            //         name: this.name,
-            //         email: this.email,
-            //         message: this.message
-            //     }
-            // }).then(() => {
-            //     this.formSubmitted = true
-            //     alert('form submitted!')
-            // }, () => {
-            //     alert('Form submission failed!')
-            // })
+            this.$http.post('https://formspree.io/hello@wp-unite.io', data)
+                .then(() => {
+                    this.formSubmitted = true
+                    alert('form submitted!')
+                }, () => {
+                    alert('Form submission failed!')
+                })
         }
     }
 }
