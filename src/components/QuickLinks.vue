@@ -2,7 +2,7 @@
     <ul class="quick-links">
         <li class="quick-links__item">
             <Twitter />
-            <a :href="twitterLink" class="quick-links__link" title="David Hewitt's twitter profile" target="_blank">
+            <a :href="twitterLink" class="quick-links__link" title="David Hewitt's twitter profile" rel="noopener" target="_blank">
                 @{{ twitter }}
             </a>
         </li>
@@ -14,7 +14,7 @@
         </li>
         <li class="quick-links__item">
             <Github />
-            <a :href="githubLink" class="quick-links__link" title="David Hewitt's github profile" target="_blank">
+            <a :href="githubLink" class="quick-links__link" title="David Hewitt's github profile" rel="noopener" target="_blank">
                 {{ github }}
             </a>
         </li>
