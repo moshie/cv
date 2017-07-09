@@ -6,7 +6,7 @@
         </button>
         <ul class="panel__body" v-show="open">
             <li class="panel__item" v-for="item in items">
-                <span v-html="item.subject"></span> - <strong class="text--danger">{{ item.grade }}</strong>
+                <span v-html="item.subject"></span> - <strong class="text--info">{{ item.grade }}</strong>
             </li>
         </ul>
     </div>
