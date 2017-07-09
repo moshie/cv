@@ -121,6 +121,7 @@ export default {
     textarea.form__field {
         resize: vertical;
         min-height: 80px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     &__error {
