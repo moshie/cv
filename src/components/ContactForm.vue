@@ -1,5 +1,5 @@
 <template>
-    <form class="form" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted" :action="action" netlify>
+    <form class="form" name="contact" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted" :action="action" netlify>
         <slot name="description"></slot>
 
         <div class="form__group" :class="{ 'form--has-error' : errors.has('name') }">
