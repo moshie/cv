@@ -1,10 +1,10 @@
 <template>
-    <form class="form" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted" action="">
+    <form class="form" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted" :action="action" netlify>
         <slot name="description"></slot>
 
         <div class="form__group" :class="{ 'form--has-error' : errors.has('name') }">
             <label for="name" class="sr-only">Full name</label>
-            <input type="text" v-model="name" v-validate="'required|alpha|min:3'" name="name" id="name" placeholder="Name" class="form__field">
+            <input type="text" v-model="name" v-validate="'required|min:3'" name="name" id="name" placeholder="Name" class="form__field">
             <p class="text--danger form__error" v-if="errors.has('name')">{{ errors.first('name') }}</p>
         </div>
 
@@ -18,7 +18,7 @@
             <label for="message" class="sr-only">
                 Message <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</small>
             </label>
-            <textarea name="message" v-model="message" v-validate="'required|max_value:225'" id="message" placeholder="Message" class="form__field" cols="4"></textarea>
+            <textarea name="message" v-model="message" v-validate="'required|max:225'" id="message" placeholder="Message" class="form__field" cols="4"></textarea>
             <p class="text--danger form__error" v-if="errors.has('message')">{{ errors.first('message') }}</p>
         </div>
 
@@ -37,7 +37,8 @@ export default {
             email: '',
             message: '',
             maxLength: 225,
-            formSubmitted: false
+            formSubmitted: false,
+            action: 'contact-form'
         }
     },
     methods: {
@@ -52,13 +53,13 @@ export default {
         },
         submitForm: function () {
             this.$http({
-                url: '/send-form',
+                url: this.action,
                 method: 'POST',
-                data: {
+                data: JSON.stringify({
                     name: this.name,
                     email: this.email,
                     message: this.message
-                }
+                })
             }).then(() => {
                 this.formSubmitted = true
                 alert('form submitted!')
