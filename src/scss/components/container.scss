@@ -6,6 +6,10 @@
     max-width: 960px;
     background: #fff;
 
+    @media screen and (max-height: 768px) {
+        max-width: 765px;
+    }
+
     &--shadow {
         box-shadow: 11px 2px 28px rgba(27, 27, 27, 0.3);
     }
