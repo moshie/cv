@@ -18,18 +18,18 @@
                 {{ github }}
             </a>
         </li>
-        <!-- <li class="quick-links__item">
-            <Star />
-            <button type="button" class="quick-links__link">
-                Bookmark
-            </button>
-        </li> -->
+        <li class="quick-links__item">
+            <Floppy />
+            <a href="/static/david-hewitt-cv.pdf" rel="noopener" target="_blank" class="quick-links__link">
+                Download
+            </a>
+        </li>
     </ul>
 </template>
 
 <script>
 import Print from '../assets/images/print.svg'
-import Star from '../assets/images/star.svg'
+import Floppy from '../assets/images/floppy.svg'
 import Twitter from '../assets/images/twitter.svg'
 import Github from '../assets/images/github.svg'
 
@@ -58,7 +58,7 @@ export default {
     components: {
         Twitter,
         Github,
-        Star,
+        Floppy,
         Print
     }
 }

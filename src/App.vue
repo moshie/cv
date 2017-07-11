@@ -3,9 +3,9 @@
 
         <header class="header">
             <Logo class="logo" />
-            <!-- <button type="button" class="bookmark">
-                <Star />
-            </button> -->
+            <a href="static/david-hewitt-cv.pdf" rel="noopener" target="_blank" class="download">
+                <Download />
+            </a>
         </header>
 
         <main id="main-content" class="main">
@@ -78,7 +78,7 @@
 <script>
 import image from './assets/images/david-hewitt.jpg'
 import Logo from './assets/images/logo.svg'
-import Star from './assets/images/star.svg'
+import Download from './assets/images/download.svg'
 
 import skills from './assets/content/skills.json'
 import a2Results from './assets/content/a2-results.json'
@@ -108,7 +108,7 @@ export default {
     },
     components: {
         Logo,
-        Star,
+        Download,
         about,
         accordion,
         school,
@@ -129,7 +129,7 @@ export default {
 @import "scss/components/container";
 @import "scss/components/header";
 @import "scss/components/about";
-@import "scss/components/bookmark";
+@import "scss/components/download";
 @import "scss/components/button";
 @import "scss/components/logo";
 @import "scss/components/footer";

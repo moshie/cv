@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>iconmonstr-save-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-136.000000, -1863.000000)" fill-rule="nonzero" fill="#EBBF07">
+            <g id="iconmonstr-save-1" transform="translate(136.000000, 1863.000000)">
+                <path d="M15.628125,3.125 L18.75,3.125 L18.75,8.33333333 L15.628125,8.33333333 L15.628125,3.125 Z M25,4.16666667 L25,25 L0,25 L0,0 L20.8333333,0 L25,4.16666667 Z M5.20833333,9.375 L19.7916667,9.375 L19.7916667,2.08333333 L5.20833333,2.08333333 L5.20833333,9.375 Z M21.875,13.5416667 L3.125,13.5416667 L3.125,22.9166667 L21.875,22.9166667 L21.875,13.5416667 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
