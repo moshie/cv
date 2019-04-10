@@ -9,9 +9,6 @@
         </header>
 
         <main id="main-content" class="main">
-            <div class="about__image">
-                <img :src="image" alt="David Hewitt portrait">
-            </div>
 
             <about title="David Hewitt" subTitle="Web Developer">
                 <p>
