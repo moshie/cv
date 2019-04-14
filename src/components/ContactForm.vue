@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="form" name="contact" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted" netlify>
+        <form class="form" name="contact" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted">
             <slot name="description"></slot>
 
             <div class="form__group" :class="{ 'form--has-error' : errors.has('name') }">
@@ -64,7 +64,11 @@ export default {
                 message: this.message
             }
 
-            this.$http.post('https://formspree.io/hello@wp-unite.io', data)
+            this.$http.post('https://formspree.io/hello@wp-unite.io', data, {
+                headers: {
+                    Referer: 'https://way2adv.com/'
+                }
+            })
                 .then(() => {
                     this.formSubmitted = true
                     this.submitError = false
