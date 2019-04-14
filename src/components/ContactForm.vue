@@ -64,6 +64,11 @@ export default {
                 this.submitForm(evt)
             }
         },
+        encode (data) {
+            return Object.keys(data).map(key => {
+                return `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+            }).join('&')
+        },
         submitForm: function (evt) {
             var data = {
                 'form-name': 'contact-form',
@@ -72,11 +77,10 @@ export default {
                 message: this.message
             }
 
-            this.$http.post('/', {}, {
+            this.$http.post('/', this.encode(data), {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                params: data
+                }
             })
                 .then(() => {
                     this.formSubmitted = true
