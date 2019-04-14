@@ -6,6 +6,7 @@
             data-netlify="true"
             data-netlify-honeypot="bot-field" 
             @submit.prevent="validateBeforeSubmit"
+            v-if="!formSubmitted"
             method="post"
         >
             <slot name="description"></slot>
