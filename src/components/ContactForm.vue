@@ -1,6 +1,13 @@
 <template>
     <div>
-        <form class="form" name="contact" @submit.prevent="validateBeforeSubmit" v-if="!formSubmitted">
+        <form 
+            class="form" 
+            name="contact" 
+            data-netlify="true"
+            data-netlify-honeypot="bot-field" 
+            @submit.prevent="validateBeforeSubmit"
+            method="post"
+        >
             <slot name="description"></slot>
 
             <div class="form__group" :class="{ 'form--has-error' : errors.has('name') }">
@@ -59,16 +66,16 @@ export default {
         },
         submitForm: function (evt) {
             var data = {
+                form-name: 'contact-form',
                 name: this.name,
                 email: this.email,
                 message: this.message
             }
 
-            this.$http.post('https://formspree.io/hello@wp-unite.io', data, {
-                headers: {
-                    Referer: 'https://way2adv.com/'
-                }
-            })
+            this.$http.post('/', 
+                this.encode(data),
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            )
                 .then(() => {
                     this.formSubmitted = true
                     this.submitError = false
