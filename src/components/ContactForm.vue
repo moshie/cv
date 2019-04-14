@@ -63,6 +63,8 @@ export default {
 
             if (!this.errors.any()) {
                 this.submitForm(evt)
+            } else {
+                evt.preventDefault()
             }
         },
         encode (data) {
