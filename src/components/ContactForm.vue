@@ -2,7 +2,7 @@
     <div>
         <form 
             class="form" 
-            name="contact" 
+            name="contact-form" 
             data-netlify="true"
             data-netlify-honeypot="bot-field" 
             @submit.prevent="validateBeforeSubmit"
