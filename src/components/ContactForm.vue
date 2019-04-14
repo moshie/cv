@@ -66,7 +66,7 @@ export default {
         },
         submitForm: function (evt) {
             var data = {
-                form-name: 'contact-form',
+                'form-name': 'contact-form',
                 name: this.name,
                 email: this.email,
                 message: this.message
