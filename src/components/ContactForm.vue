@@ -72,8 +72,10 @@ export default {
                 message: this.message
             }
 
-            this.$http.post('/', this.encode(data), {
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            this.$http.post('/', data, {
+                headers: { 
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
             })
                 .then(() => {
                     this.formSubmitted = true
