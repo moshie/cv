@@ -1,33 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>David Hewitt &middot; Curriculum vitae</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>David Hewitt &middot; Curriculum vitae</title>
 
-        <meta name="description" content="Curriculum vitae for David Hewitt">
-        <meta name="keywords" content="David,Hewitt,Curriculum,Vitae,Web,Developer">
-        <meta name="author" content="David Hewitt">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Curriculum vitae for David Hewitt" />
+    <meta
+      name="keywords"
+      content="David,Hewitt,Curriculum,Vitae,Web,Developer"
+    />
+    <meta name="author" content="David Hewitt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--[if IE]><link href="static/favicon.ico" rel="icon" /><![endif]-->
-        <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png" />
-        <meta name="theme-color" content="#4d4d4d">
-        <meta name="msapplication-navbutton-color" content="#4d4d4d">
-        <meta name="msapplication-TileColor" content="#fff" />
+    <!--[if IE]><link href="static/favicon.ico" rel="icon" /><![endif]-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="static/favicon-32x32.png"
+    />
+    <meta name="theme-color" content="#4d4d4d" />
+    <meta name="msapplication-navbutton-color" content="#4d4d4d" />
+    <meta name="msapplication-TileColor" content="#fff" />
 
-        <link href="static/manifest.json" rel="manifest">
-    </head>
-    <body>
+    <link href="static/manifest.json" rel="manifest" />
 
-        <a href="#main-content" class="sr-only">Skip to content</a>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-        <div class="container container--shadow" id="app"></div>
+      body,
+      html {
+        margin: 0;
+      }
 
-        <form name="contact-form" netlify hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <textarea name="message"></textarea>
-        </form>
-        <!-- built files will be auto injected -->
-    </body>
+      body {
+        padding-top: 11px;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.234em;
+        background: #eee;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      a:focus,
+      button:focus {
+        outline: 2px dashed rgba(0, 168, 255, 0.5);
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 960px;
+        box-shadow: 11px 2px 28px rgba(27, 27, 27, 0.3);
+      }
+
+      /** Header */
+      .header {
+        background: black;
+        padding: 10px;
+        background: #000;
+        height: 60px;
+      }
+
+      .download {
+        border: 0;
+        background: transparent;
+        padding: 6px;
+        float: right;
+      }
+
+      .top-section {
+        position: relative;
+        padding: 20px 10px 30px 40px;
+      }
+
+      .id-icon {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+      }
+
+      .job-title {
+        color: #4c4c4c;
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      .name {
+        font-weight: 700;
+        font-size: 22px;
+        display: block;
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="sr-only">Skip to content</a>
+
+    <div class="container">
+      <header class="header">
+        <img
+          src="./static/logo.svg"
+          alt="Logo for David Hewitt's Curriculum vitae"
+        />
+
+        <a
+          href="./static/david-hewitt-cv.pdf"
+          title="download a pdf copy"
+          target="_blank"
+          rel="noopener"
+          class="download"
+        >
+          <img
+            src="./static/floppy-disk-icon.svg"
+            alt="icon of a floppy disk for downloading the pdf version"
+          />
+          <span class="sr-only">Download a pdf copy</span>
+        </a>
+      </header>
+
+      <main class="container" id="main-content">
+        <section id="about-me" class="top-section">
+          <img
+            class="id-icon"
+            src="./static/id-card-icon.svg"
+            alt="identification card icon"
+          />
+          <h1 class="name">David Hewitt</h1>
+          <span class="job-title">Web Engineer</span>
+
+          <p>
+            I am a dedicated, hardworking person who has accumulated a wealth of
+            industry relevant skills. I aim to become part of a team at a
+            reputable company where I can continue to pursue my passion for
+            software development.
+          </p>
+          <p>
+            I work well within a team environment as well as working using my
+            own initiative, and can offer solutions to difficult problems. I
+            pride myself on my communication and leadership skills and a
+            professional work ethic.
+          </p>
+          <p>
+            My current development background revolves heavily around JavaScript
+            and PHP however, I also have an excellent working knowledge in many
+            other coding languages and frameworks.
+          </p>
+          <p>
+            Free time outside of office hours is dedicated to help improve the
+            tools and standards used by myself and others throughout the
+            development community, I also improve my understanding through
+            attendance of conferences and meet ups.
+          </p>
+          <p>
+            Reading and watching a variety of media based on all aspects of
+            computing is a hobby and I also participate in sporting activities
+            such as snowboarding, gym and football.
+          </p>
+        </section>
+
+        <section id="skills">
+          <h2>My Skills</h2>
+
+          <button>JavaScript</button>
+          <ul>
+            <li>NodeJS</li>
+            <li>React</li>
+            <li>NextJS</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>Mocha</li>
+            <li>Typescript</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>Vue</li>
+            <li>Socket io</li>
+            <li>JQuery</li>
+            <li>
+              Google Maps
+              <abbr title="Application Programming interface">API</abbr>
+            </li>
+          </ul>
+
+          <button>PHP</button>
+          <ul>
+            <li>Laravel</li>
+            <li>Codeigniter</li>
+            <li>WordPress</li>
+          </ul>
+
+          <button>.NET</button>
+          <ul>
+            <li>Umbraco</li>
+          </ul>
+
+          <button>Hosting</button>
+          <ul>
+            <li>AWS - (SES, S3, CloudFront, API Gateway, Lambda)</li>
+            <li>Heroku</li>
+            <li>Kubernetes</li>
+            <li>WPEngine</li>
+            <li>Forge / Envoyer</li>
+          </ul>
+
+          <button>Tooling</button>
+          <ul>
+            <li>Jenkins</li>
+            <li>GitHub Actions</li>
+            <li>Cypress</li>
+            <li>Playwright</li>
+            <li>Grafana</li>
+            <li>Prometheus</li>
+            <li>Git Version Control</li>
+            <li>Webpack</li>
+            <li>Gulp</li>
+            <li>Node package managers (pnpm, yarn, npm)</li>
+            <li>Grunt</li>
+            <li>Browserify</li>
+            <li>Office Suite (Word, Excel, Outlook ect)</li>
+            <li>Adobe Suite</li>
+            <li>Figma</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer></footer>
+    </div>
+
+    <!-- built files will be auto injected -->
+  </body>
 </html>
