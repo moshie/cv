@@ -24,7 +24,6 @@
     <meta name="msapplication-TileColor" content="#fff" />
 
     <link href="static/manifest.json" rel="manifest" />
-
     <style>
       * {
         box-sizing: border-box;
@@ -79,8 +78,9 @@
         box-shadow: 11px 2px 28px rgba(27, 27, 27, 0.3);
       }
 
-      section {
+      main {
         background: white;
+        padding-bottom: 10px;
       }
 
       /** Header */
@@ -196,6 +196,69 @@
       .dropdown.open button img {
         transform: rotate(180deg);
       }
+
+      .section {
+        padding-bottom: 30px;
+      }
+
+      .timeline {
+        margin: 0 0 10px 30px;
+        padding: 0 0 0 20px;
+        position: relative;
+        list-style-type: none;
+      }
+
+      .timeline:after {
+        content: '';
+        position: absolute;
+        left: -1px;
+        top: 0;
+        bottom: 20px;
+        width: 1px;
+        background: #e1e1e1;
+      }
+
+      .timeline li {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .timeline li:before {
+        position: absolute;
+        left: -25px;
+        top: 6px;
+        z-index: 3;
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #00a8ff;
+        border-radius: 50%;
+      }
+
+      .timeline li:after {
+        position: absolute;
+        left: -31px;
+        z-index: 2;
+        top: 0;
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid #cecece;
+        background: #fff;
+      }
+
+      .timeline-title {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .timeline-time {
+        display: block;
+        padding-left: 15px;
+        color: #3b3b3b;
+      }
     </style>
   </head>
   <body>
@@ -263,7 +326,7 @@
           </p>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="section">
           <h2>
             <span>My Skills</span>
           </h2>
@@ -570,9 +633,277 @@
             </ul>
           </div>
         </section>
+
+        <section id="employment" class="section">
+          <h2>
+            <span>Employment</span>
+          </h2>
+
+          <ul class="timeline">
+            <li>
+              <span class="timeline-title">Zopa Bank (Full time)</span>
+              <span class="timeline-time">
+                <time datetime="">September 2019</time> - <span>Present</span>
+              </span>
+            </li>
+            <li>
+              <span class="timeline-title">Indigo Tree (Full time)</span>
+              <span class="timeline-time">
+                <time datetime="">October 2014</time> -
+                <span>September 2019</span>
+              </span>
+            </li>
+            <li>
+              <span class="timeline-title">Kinetic Solutions (Full time)</span>
+              <span class="timeline-time">
+                <time datetime="">September 2013</time> -
+                <span>October 2014</span>
+              </span>
+            </li>
+            <li>
+              <span class="timeline-title">BeSeen Marketing (Freelance)</span>
+              <span class="timeline-time">
+                <time datetime="">January 2012</time> - <span>June 2012</span>
+              </span>
+            </li>
+            <li>
+              <span class="timeline-title">Tesco (Full time)</span>
+              <span class="timeline-time">
+                <time datetime="">March 2011</time> -
+                <span>September 2013</span>
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="education" class="section">
+          <h2>
+            <span>Education</span>
+          </h2>
+
+          <div class="school">
+            <img src="./static/school-icon.svg" alt="School Icon" />
+            <span class="school-title">Queensbury Upper School</span>
+            <span class="school-date">
+              <time datetime="2005-09-01T12:00:00.150Z">September 2005</time> -
+              <time datetime="2010-09-01T12:00:00.150Z">September 2010</time>
+            </span>
+          </div>
+
+          <div class="dropdown dropdown-styled open">
+            <button
+              id="a2-levels-dropdown-button"
+              aria-haspopup="true"
+              aria-expanded="true"
+            >
+              A2 Level Results
+              <img src="./static/chevron-icon.svg" alt="Chevron pointing" />
+            </button>
+            <ul aria-labelledby="a2-levels-dropdown-button">
+              <li>
+                Information Communication Technology (ICT) -
+                <strong class="text-info">Merit</strong>
+              </li>
+              <li>Media Studies - <strong class="text-info">Pass</strong></li>
+              <li>Photography - <strong class="text-info">Pass</strong></li>
+            </ul>
+          </div>
+
+          <div class="dropdown dropdown-styled">
+            <button
+              id="btec-first-dropdown-button"
+              aria-haspopup="true"
+              aria-expanded="true"
+            >
+              BTEC First Results
+              <img src="./static/chevron-icon.svg" alt="Chevron pointing" />
+            </button>
+            <ul aria-labelledby="btec-first-dropdown-button">
+              <li>
+                Art & Design -
+                <strong class="text-info">Merit</strong>
+              </li>
+              <li>Business - <strong class="text-info">Pass</strong></li>
+            </ul>
+          </div>
+
+          <div class="dropdown dropdown-styled">
+            <button
+              id="gcse-dropdown-button"
+              aria-haspopup="true"
+              aria-expanded="true"
+            >
+              BTEC First Results
+              <img src="./static/chevron-icon.svg" alt="Chevron pointing" />
+            </button>
+            <ul aria-labelledby="gcse-dropdown-button">
+              <li>
+                Art & Design -
+                <strong class="text-info">Grade C</strong>
+              </li>
+              <li>
+                <strong>3 x</strong> Information Communication Technology (ICT)
+                - <strong class="text-info">Grade C</strong>
+              </li>
+              <li>Maths - <strong class="text-info">Grade E</strong></li>
+              <li>English - <strong class="text-info">Grade E</strong></li>
+            </ul>
+          </div>
+
+          <div class="school">
+            <img src="./static/school-icon.svg" alt="School Icon" />
+            <span class="school-title">Priory Middle School</span>
+            <span class="school-date">
+              <time datetime="2001-09-01T12:00:00.150Z">September 2001</time> -
+              <time datetime="2005-09-01T12:00:00.150Z">September 2005</time>
+            </span>
+          </div>
+
+          <div class="school">
+            <img src="./static/school-icon.svg" alt="School Icon" />
+            <span class="school-title">Totternhoe Lower School</span>
+            <span class="school-date">
+              <time datetime="1996-09-01T12:00:00.150Z">September 1996</time> -
+              <time datetime="2001-09-01T12:00:00.150Z">September 2001</time>
+            </span>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <h2><span>Contact</span></h2>
+
+          <ul class="quick-links">
+            <li class="quick-links-item">
+              <img
+                data-src="./static/twitter.svg"
+                alt="Twitter logo"
+                class="lazy"
+              />
+              <a
+                href="https://twitter.com/mosh1e"
+                title="David Hewitt's twitter profile"
+                rel="noopener"
+                target="_blank"
+                class="quick-links-link"
+              >
+                @mosh1e
+              </a>
+            </li>
+            <li class="quick-links-item">
+              <img
+                data-src="./static/printer-icon.svg"
+                alt="Printer Icon"
+                class="lazy"
+              />
+              <button type="button" onclick="print()" class="quick-links-link">
+                Print page
+              </button>
+            </li>
+            <li class="quick-links-item">
+              <img
+                data-src="./static/github.svg"
+                alt="Github Icon"
+                class="lazy"
+              />
+              <a
+                href="https://github.com/moshie"
+                title="David Hewitt's github profile"
+                rel="noopener"
+                target="_blank"
+                class="quick-links-link"
+              >
+                moshie
+              </a>
+            </li>
+            <li class="quick-links-item">
+              <img
+                data-src="./static/black-floppy-disk.svg"
+                alt="Floppy disk Icon"
+                class="lazy"
+              />
+              <a
+                data-v-04125a6a=""
+                href="/static/david-hewitt-cv.pdf"
+                rel="noopener"
+                target="_blank"
+                class="quick-links-link"
+              >
+                Download
+              </a>
+            </li>
+          </ul>
+
+          <div>
+            <form
+              class="form"
+              id="contact-form"
+              name="contact-form"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              method="POST"
+            >
+              <span class="form-description">
+                Like what you see? Get in touch below!
+              </span>
+
+              <div class="form-group">
+                <label for="name" class="sr-only"
+                  >Full name <span aria-label="required">*</span></label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  aria-required="true"
+                  placeholder="Name"
+                  class="form-field"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="sr-only"
+                  >Email <span aria-label="required">*</span></label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  class="form-field"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="sr-only"
+                  >Message <span aria-label="required">*</span></label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  class="form-field"
+                  cols="4"
+                  required
+                  aria-required="true"
+                  minlength="10"
+                  maxlength="500"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="button-primary">Send</button>
+              </div>
+            </form>
+          </div>
+        </section>
       </main>
 
-      <footer></footer>
+      <footer class="footer">
+        <span>David Hewitt</span>
+      </footer>
     </div>
 
     <script>
@@ -598,6 +929,20 @@
             });
           });
         });
+
+        /** Lazy Load CSS file */
+        window.onload = function () {
+          const cssTag = document.createElement('link');
+          cssTag.rel = 'stylesheet';
+          cssTag.href = './static/main.css';
+          document.head.appendChild(cssTag);
+
+          const lazyImages = document.querySelectorAll('.lazy');
+          console.log(lazyImages);
+          lazyImages.forEach((image) => {
+            image.setAttribute('src', image.getAttribute('data-src'));
+          });
+        };
       })(window, document);
     </script>
   </body>
