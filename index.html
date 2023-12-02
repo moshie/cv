@@ -79,6 +79,10 @@
         box-shadow: 11px 2px 28px rgba(27, 27, 27, 0.3);
       }
 
+      section {
+        background: white;
+      }
+
       /** Header */
       .header {
         background: black;
@@ -116,6 +120,81 @@
         font-size: 22px;
         display: block;
         margin-bottom: 2px;
+      }
+
+      /** My skills */
+
+      h2 {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+        display: table;
+        width: 100%;
+        white-space: nowrap;
+        position: relative;
+      }
+
+      h2 span {
+        background: white;
+        position: relative;
+        z-index: 2;
+        padding: 0 10px;
+      }
+
+      h2:before {
+        border-top: 1px solid #ebebeb;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        right: 10px;
+        z-index: 1;
+      }
+
+      .dropdown button {
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #f7f7f7;
+        padding: 10px 15px;
+        font-weight: 700;
+        display: block;
+        font-size: 14px;
+        width: 100%;
+        cursor: pointer;
+        text-align: left;
+      }
+
+      .dropdown button img {
+        float: right;
+        transition: transform 0.3s ease;
+      }
+
+      .dropdown ul {
+        background: #f7f7f7;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+      }
+
+      .dropdown ul li {
+        padding: 10px 15px;
+        display: block;
+        border-bottom: 1px solid #efefef;
+      }
+
+      .dropdown ul li img {
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+
+      .dropdown.open ul {
+        display: block;
+      }
+
+      .dropdown.open button img {
+        transform: rotate(180deg);
       }
     </style>
   </head>
@@ -185,73 +264,341 @@
         </section>
 
         <section id="skills">
-          <h2>My Skills</h2>
+          <h2>
+            <span>My Skills</span>
+          </h2>
 
-          <button>JavaScript</button>
-          <ul>
-            <li>NodeJS</li>
-            <li>React</li>
-            <li>NextJS</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>Mocha</li>
-            <li>Typescript</li>
-            <li>React</li>
-            <li>Angular</li>
-            <li>Vue</li>
-            <li>Socket io</li>
-            <li>JQuery</li>
-            <li>
-              Google Maps
-              <abbr title="Application Programming interface">API</abbr>
-            </li>
-          </ul>
+          <div class="dropdown">
+            <button
+              id="javascript-dropdown-button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              JavaScript
+              <img src="./static/chevron-icon.svg" alt="Chevron pointing" />
+            </button>
+            <ul aria-labelledby="javascript-dropdown-button">
+              <li>
+                <img
+                  data-src="./static/skill-icons/nodejs.svg"
+                  alt="Nodejs logo"
+                />
+                NodeJS
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/react.svg"
+                  alt="React logo"
+                />
+                React
+              </li>
+              <li>NextJS</li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/express.svg"
+                  alt="Express logo"
+                />
+                Express
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/mongo.svg"
+                  alt="MongoDB logo"
+                />
+                MongoDB
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/mocha.svg"
+                  alt="Mocha logo"
+                />
+                Mocha
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/typescript.svg"
+                  alt="Typescript logo"
+                />
+                Typescript
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/angular.svg"
+                  alt="Angluar logo"
+                />
+                Angular
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/vuejs.svg"
+                  alt="VueJS logo"
+                />
+                Vue
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/socket-io.svg"
+                  alt="Socket IO logo"
+                />
+                Socket io
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/jquery.svg"
+                  alt="JQuery logo"
+                />
+                JQuery
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/google-maps.svg"
+                  alt="Google maps api logo"
+                />
+                Google Maps
+                <abbr title="Application Programming interface">API</abbr>
+              </li>
+            </ul>
+          </div>
 
-          <button>PHP</button>
-          <ul>
-            <li>Laravel</li>
-            <li>Codeigniter</li>
-            <li>WordPress</li>
-          </ul>
+          <div class="dropdown">
+            <button
+              id="php-dropdown-button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              PHP <img src="./static/chevron-icon.svg" alt="Chevron pointing" />
+            </button>
+            <ul aria-labelledby="php-dropdown-button">
+              <li>
+                <img
+                  data-src="./static/skill-icons/laravel.svg"
+                  alt="Laravel logo"
+                />
+                Laravel
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/codigniter.svg"
+                  alt="Codeigniter logo"
+                />
+                Codeigniter
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/wordpress.svg"
+                  alt="WordPress logo"
+                />
+                WordPress
+              </li>
+            </ul>
+          </div>
 
-          <button>.NET</button>
-          <ul>
-            <li>Umbraco</li>
-          </ul>
+          <div class="dropdown">
+            <button
+              id="net-dropdown-button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              .NET
+              <img src="./static/chevron-icon.svg" alt="Chevron pointing" />
+            </button>
+            <ul aria-labelledby="net-dropdown-button">
+              <li>
+                <img
+                  data-src="./static/skill-icons/umbraco.svg"
+                  alt="Umbraco logo"
+                />
+                Umbraco
+              </li>
+            </ul>
+          </div>
 
-          <button>Hosting</button>
-          <ul>
-            <li>AWS - (SES, S3, CloudFront, API Gateway, Lambda)</li>
-            <li>Heroku</li>
-            <li>Kubernetes</li>
-            <li>WPEngine</li>
-            <li>Forge / Envoyer</li>
-          </ul>
+          <div class="dropdown">
+            <button
+              id="hosting-dropdown-button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Hosting
+              <img src="./static/chevron-icon.svg" alt="Chevron pointing" />
+            </button>
+            <ul aria-labelledby="hosting-dropdown-button">
+              <li>
+                <img data-src="./static/skill-icons/aws.svg" alt="AWS logo" />
+                AWS - (SES, S3, CloudFront, API Gateway, Lambda)
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/heroku.svg"
+                  alt="Heroku logo"
+                />
+                Heroku
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/umbraco.svg"
+                  alt="Kubernetes logo"
+                />
+                Kubernetes
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/wp-engine.svg"
+                  alt="WPEngine logo"
+                />
+                WPEngine
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                Forge / Envoyer
+              </li>
+            </ul>
+          </div>
 
-          <button>Tooling</button>
-          <ul>
-            <li>Jenkins</li>
-            <li>GitHub Actions</li>
-            <li>Cypress</li>
-            <li>Playwright</li>
-            <li>Grafana</li>
-            <li>Prometheus</li>
-            <li>Git Version Control</li>
-            <li>Webpack</li>
-            <li>Gulp</li>
-            <li>Node package managers (pnpm, yarn, npm)</li>
-            <li>Grunt</li>
-            <li>Browserify</li>
-            <li>Office Suite (Word, Excel, Outlook ect)</li>
-            <li>Adobe Suite</li>
-            <li>Figma</li>
-          </ul>
+          <div class="dropdown">
+            <button
+              id="tooling-dropdown-button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Tooling
+              <img src="./static/chevron-icon.svg" alt="Chevron pointing" />
+            </button>
+            <ul aria-labelledby="tooling-dropdown-button">
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                Jenkins
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                GitHub Actions
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                Cypress
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                Playwright
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                Grafana
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                Prometheus
+              </li>
+              <li>
+                <img data-src="./static/skill-icons/git.svg" alt="Git logo" />
+                Git Version Control
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/webpack.svg"
+                  alt="Forge logo"
+                />
+                Webpack
+              </li>
+              <li>
+                <img data-src="./static/skill-icons/gulp.svg" alt="Gulp logo" />
+                Gulp
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                Node package managers (pnpm, yarn, npm)
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/grunt.svg"
+                  alt="Grunt logo"
+                />
+                Grunt
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/browserify.svg"
+                  alt="Browserify logo"
+                />
+                Browserify
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/office-suite.svg"
+                  alt="Office Suite logo"
+                />
+                Office Suite (Word, Excel, Outlook ect)
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/adobe.svg"
+                  alt="Adobe logo"
+                />
+                Adobe Suite
+              </li>
+              <li>
+                <img
+                  data-src="./static/skill-icons/forge.svg"
+                  alt="Forge logo"
+                />
+                Figma
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
 
       <footer></footer>
     </div>
 
-    <!-- built files will be auto injected -->
+    <script>
+      (function (window, document) {
+        /** Dropdown logic **/
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector('button');
+          const items = dropdown.querySelector('ul');
+          button.addEventListener('click', () => {
+            dropdown.classList.toggle('open');
+            dropdown
+              .querySelector('button')
+              .setAttribute(
+                'aria-expanded',
+                dropdown.classList.contains('open')
+              );
+            items.querySelectorAll('li img').forEach((image) => {
+              if (!image.hasAttribute('src')) {
+                image.setAttribute('src', image.getAttribute('data-src'));
+              }
+            });
+          });
+        });
+      })(window, document);
+    </script>
   </body>
 </html>
