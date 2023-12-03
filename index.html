@@ -1081,7 +1081,6 @@
           document.head.appendChild(cssTag);
 
           const lazyImages = document.querySelectorAll('.lazy');
-          console.log(lazyImages);
           lazyImages.forEach((image) => {
             image.setAttribute('src', image.getAttribute('data-src'));
           });
